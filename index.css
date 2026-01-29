@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 64px;
+  text-align: center;
+  color: #60491c;
+}
+.main {
+  padding: 0 16px 32px;
+}
+body {
+  background-color: rgba(72, 163, 0, 0.07);
+  font-family: Poppins;
+  margin: 0;
+}
+.title {
+  color: #48a300;
+}
+.appcontainer {
+  background-color: #fbfbfb;
+  max-width: 660px;
+  margin-inline: auto;
+  border-radius: 15px;
+  padding: 32px 48px;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
+}
+.sun {
+  vertical-align: middle;
+  margin-left: 16px;
+  animation: spin 2s linear infinite; /* Circular Animation */
+  height: 40px;
+  width: 40px;
+}
+.progress {
+  font-size: 14px;
+  color: #858585;
+  margin-bottom: 20px;
+}
+.progress-bar {
+  height: 30px;
+  background-color: rgba(72, 163, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 42px;
+}
+.progress-value {
+  background-color: rgba(72, 163, 0, 1);
+  border-radius: 15px;
+  height: 100%;
+  width: 0;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(238, 255, 224, 1);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: width 0.2s ease-in-out;
+}
+.progress-value span {
+  padding-left: 20px;
+  min-width: max-content;
+}
+.error-label {
+  font-size: 12px;
+  color: #ff5151;
+  margin-top: 4px;
+  display: none;
+}
+.goal-container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  background-color: #ffffff;
+  margin-bottom: 42px;
+}
+.custom-checkbox {
+  height: 24px;
+  width: 24px;
+  border: 2px solid rgba(97, 72, 28, 0.3);
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check-icon {
+  display: none;
+}
+.completed .custom-checkbox {
+  background: rgba(72, 163, 0, 1);
+  border-color: #48a300;
+}
+.completed .check-icon {
+  display: block;
+}
+.goal-input {
+  margin-left: 22px;
+  font-family: inherit;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  align-self: stretch;
+}
+.goal-input::placeholder {
+  color: #d9d9d9;
+}
+.quote {
+  font-weight: 500;
+  text-align: center;
+}
+.with {
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  color: rgba(133, 133, 133, 1);
+  margin-top: 24px;
+}
+.completed .goal-input {
+  color: #48a300;
+  text-decoration-line: line-through;
+}
+
+.show-error .error-label {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+  .app-container {
+    padding: 16px 32px;
+  }
+
+  .goal-container {
+    height: 64px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+  }
+}
+@keyframes spin {
+  /* Circular Animation */
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
